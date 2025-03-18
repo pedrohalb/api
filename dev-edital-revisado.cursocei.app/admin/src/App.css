@@ -1,0 +1,2055 @@
+/*ELEMENTOS DA HEADER NORMAL*/
+
+/* HEADER */
+.header {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite quebra de linha */
+  gap: 1rem; /* Adiciona espaçamento entre os elementos */
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-icon {
+  font-size: 24px;
+  color: #495057;
+  margin-right: 0.5rem;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Quebra de linha nos controles */
+  gap: 0.75rem;
+  height: auto; /* Ajusta a altura conforme necessário */
+}
+
+/* SEARCH BAR */
+.search-bar {
+  max-width: 250px;
+  flex-shrink: 0;
+  min-width: 150px; /* Define largura mínima */
+  text-align: center; /* Centraliza texto */
+}
+
+.search-icon {
+  background-color: #f0f0f0;
+  border: none;
+}
+
+/* FILTER DROPDOWN */
+.filter-dropdown .dropdown-toggle {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  min-width: 150px; /* Define largura mínima */
+  text-align: center; /* Centraliza texto */
+}
+
+/* Cor ao passar o mouse */
+.filter-dropdown .dropdown-toggle:hover {
+  background-color: #6C757D!important; /* Fundo mais claro */
+  color: #fff !important; /* Texto branco */
+}
+
+/* Cor ao clicar (foco ou ativo) */
+.filter-dropdown .dropdown-toggle:active,
+.filter-dropdown .dropdown-toggle:focus {
+  background-color: #495057 !important; /* Fundo escuro */
+  color: #fff !important; /* Texto branco */
+  box-shadow: 0 0 4px #495057 !important; /* Sombra ao redor */
+  outline: none !important; /* Remove o contorno azul */
+  border: none !important; /* Remove a borda */
+}
+
+
+/* Estilo para o item selecionado no Dropdown */
+.dropdown-menu .dropdown-item.active {
+  background-color: #495057 !important; /* Mesma cor do botão de filtro */
+  color: #fff !important; /* Texto branco */
+  font-weight: bold !important; /* Negrito */
+}
+
+/* Estilo para itens no estado hover (passar o mouse) */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #6C757D!important; /* Fundo um pouco mais claro */
+  color: #fff !important; /* Texto branco */
+  font-weight: bold !important; /* Negrito */
+}
+
+/* Estilo geral para itens do Dropdown */
+.dropdown-menu .dropdown-item {
+  background-color: #f0f0f0 !important; /* Fundo padrão */
+  color: #495057 !important; /* Texto padrão */
+  font-weight: normal !important; /* Texto regular */
+  transition: background-color 0.2s ease, color 0.2s ease; /* Transições suaves */
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 4px #495057;
+  border-color: #495057;
+  font-weight: bold !important;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* ADD ITEM BUTTON */
+.add-item-btn {
+  font-size: 16px;
+  color: #fff;
+  background-color: #343A40;
+  border-color: #343A40;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease-in-out;
+  min-width: 150px; /* Define largura mínima */
+  text-align: center; /* Centraliza texto */
+}
+
+.add-item-btn:hover {
+  background-color: #ccc;
+  color: #fff;
+  border-color: #ccc;
+}
+
+.add-item-btn:focus {
+  outline: none;
+  box-shadow: 0 0 4px #495057;
+  border-color: #495057;
+  background-color: #6C757D;
+  color: #fff;
+}
+
+.add-item-btn:active {
+  background-color: #495057 !important;
+  color: #fff !important;
+  border-color: #495057 !important;
+  outline: none;
+  box-shadow: none;
+}
+
+/* PAGINATION */
+.custom-pagination {
+  display: flex;
+  flex-wrap: wrap; /* Quebra a paginação em telas pequenas */
+  justify-content: center;
+  gap: 6px;
+  margin: 0.5rem 0;
+}
+
+.custom-pagination .page-item .page-link {
+  background-color: transparent !important;
+  color: #495057 !important;
+  border: none !important;
+  padding: 5px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 5px !important;
+  font-weight: normal !important;
+  box-sizing: content-box !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-pagination .page-item .page-link:hover {
+  background-color: #ccc !important;
+  color: #000 !important;
+}
+
+.custom-pagination .page-item:first-child .page-link,
+.custom-pagination .page-item:last-child .page-link {
+  background-color: #495057 !important;
+  color: #fff !important;
+  border-radius: 5px !important;
+  padding: 5px 12px !important;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #f0f0f0 !important;
+  color: #495057 !important;
+  font-weight: bold !important;
+  border: 1px solid #ddd !important;
+  border-radius: 5px !important;
+  padding: 3px 10px !important;
+}
+
+.custom-pagination .page-item.disabled .page-link {
+  color: #ccc !important;
+  background-color: #343A40 !important;
+  pointer-events: none;
+}
+
+.custom-pagination .page-item .page-link:focus {
+  outline: none !important;
+  box-shadow: 0 0 4px #495057 !important;
+  border-color: #495057 !important;
+}
+
+.custom-pagination .page-item:first-child .page-link:focus,
+.custom-pagination .page-item:last-child .page-link:focus {
+  box-shadow: 0 0 4px #495057 !important;
+  border-color: #495057 !important;
+}
+
+
+/*ELEMENTOS DA HEADER SINGLE*/
+
+/* HEADER SINGLE */
+.header-single {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* HEADER SINGLE CONTROLS */
+.header-single-controls {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  gap: 1rem; /* Espaçamento entre os elementos */
+  justify-content: flex-end; /* Alinha à direita */
+}
+
+.header-single-top {
+  display: flex;
+  align-items: center; /* Alinhamento vertical */
+  justify-content: flex-start;
+  gap: 1.5rem; /* Espaço entre status e campo de nome */
+  width: 100%;
+}
+
+.header-single-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* Espaçamento entre label e botão */
+  min-width: 80px; /* Define uma largura mínima */
+}
+
+.header-single-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #495057;
+}
+
+/* Estilização do quadradinho branco no botão de status */
+.status-toggle {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  background-color: #6C757D;
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas para botão estilo "switch" */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.status-toggle::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px; /* Início na esquerda */
+  width: 30px;
+  height: 30px;
+  background-color: #fff; /* Quadrado branco */
+  border-radius: 5px; /* Deixa o quadrado como círculo */
+  transition: left 0.3s ease; /* Transição suave do movimento */
+}
+
+.status-toggle.active {
+  background-color: #28a745; /* Verde para ativado */
+}
+
+.status-toggle.active::before {
+  left: 45px; /* Move para a direita */
+}
+
+.header-single-name {
+  flex-grow: 1; /* Permite que o campo de nome ocupe o espaço restante */
+}
+
+.header-single-name input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-single-name input:focus {
+  outline: none;
+  border-color: #495057;
+  box-shadow: 0 0 5px rgba(73, 80, 87, 0.5);
+}
+
+/*DROP DOWN DA SINGLE TOPIC*/
+.header-single-dropdown .filter-dropdown .dropdown-toggle {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  min-width: 150px; /* Define largura mínima */
+  height: 44px;
+  text-align: center; /* Centraliza texto */
+  background-color: #f0f0f0 ;
+}
+
+.header-single-dropdown .filter-dropdown.dropdown-toggle::after {
+  content: none !important; /* Remove o ícone de dropdown */
+}
+
+/* Cor ao passar o mouse */
+.header-single-dropdown .filter-dropdown .dropdown-toggle:hover {
+  background-color: #6C757D!important; /* Fundo mais claro */
+  color: #fff !important; /* Texto branco */
+}
+
+/* Cor ao clicar (foco ou ativo) */
+.header-single-dropdown .filter-dropdown .dropdown-toggle:active,
+.header-single-dropdown .filter-dropdown .dropdown-toggle:focus {
+  background-color: #495057 !important; /* Fundo escuro */
+  color: #fff !important; /* Texto branco */
+  box-shadow: 0 0 4px #495057 !important; /* Sombra ao redor */
+  outline: none !important; /* Remove o contorno azul */
+  border: none !important; /* Remove a borda */
+}
+
+/* Estilo para o item selecionado no Dropdown */
+.header-single-dropdown .dropdown-menu .dropdown-item.active {
+  background-color: #495057 !important; /* Mesma cor do botão de filtro */
+  color: #fff !important; /* Texto branco */
+  font-weight: bold !important; /* Negrito */
+}
+
+/* Estilo para itens no estado hover (passar o mouse) */
+.header-single-dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #6C757D!important; /* Fundo um pouco mais claro */
+  color: #fff !important; /* Texto branco */
+  font-weight: bold !important; /* Negrito */
+}
+
+/* Estilo geral para itens do Dropdown */
+.header-single-dropdown .dropdown-menu .dropdown-item {
+  background-color: #f0f0f0 !important; /* Fundo padrão */
+  color: #495057 !important; /* Texto padrão */
+  font-weight: normal !important; /* Texto regular */
+  transition: background-color 0.2s ease, color 0.2s ease; /* Transições suaves */
+}
+
+.header-single-dropdown .dropdown-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 4px #495057;
+  border-color: #495057;
+  font-weight: bold !important;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.header-single-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #495057;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem; /* Espaçamento entre as seções */
+}
+
+.header-single-title-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espaço entre o ícone e o título */
+  margin-left: 1rem; /* Move o título e ícone levemente para a direita */
+}
+
+/* Estilização do ícone ao lado do título */
+.header-icon {
+  font-size: 1rem; /* Tamanho do ícone */
+  color: #495057; /* Cor do ícone */
+}
+
+.add-item-btn {
+  font-size: 16px;
+  color: #fff;
+  background-color: #343A40;
+  border-color: #343A40;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease-in-out;
+  min-width: 150px; /* Define largura mínima */
+  text-align: center; /* Centraliza texto */
+}
+
+.add-item-btn:hover {
+  background-color: #ccc;
+  color: #fff;
+  border-color: #ccc;
+}
+
+.add-item-btn:focus {
+  outline: none;
+  box-shadow: 0 0 4px #495057;
+  border-color: #495057;
+  background-color: #6C757D;
+  color: #fff;
+}
+
+.add-item-btn:active {
+  background-color: #495057 !important;
+  color: #fff !important;
+  border-color: #495057 !important;
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* TABELA */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background-color: #f0f0f0 !important;
+  color: #495057;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.table tbody td {
+  background-color: #fff;
+  height: 80px !important;
+  vertical-align: middle !important;
+}
+
+.table-btn-subitens {
+  background-color: #ADB5BD !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem;
+}
+
+/* Estilo para o quadradinho dos números de subitens */
+.subitens-number {
+  background-color: #868E96; /* Tom de cinza mais escuro */
+  color: #000; /* Texto preto */
+  font-weight: bold; /* Texto em negrito */
+  border-radius: 4px; /* Bordas arredondadas */
+  padding: 2px 6px; /* Espaçamento interno */
+  display: inline-block; /* Garante que seja um quadrado ao redor do número */
+  text-align: center; /* Centraliza o texto */
+}
+
+.table-btn-editar {
+  background-color: #495057 !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  border: 1px solid #ccc !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.2s ease-in-out;
+}
+
+.topicos-buttons-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.materias-buttons-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-ativas {
+  background-color: #4CAF50 !important; /* Verde */
+  color: #fff !important;
+}
+
+.btn-inativas {
+  background-color: #ADB5BD !important; /* Amarelo */
+  color: #000 !important;
+}
+
+.btn-excluidas {
+  background-color: #DC3545 !important; /* Vermelho */
+  color: #fff !important;
+}
+
+.btn-excluidas .subitens-number {
+  background-color: #B22222 !important; /* Vermelho já existente para Excluídas */
+}
+
+.btn-ativas .subitens-number {
+  background-color: #2E7D32 !important;
+}
+
+.table-btn-editar:hover {
+  background-color: #ccc !important;
+  color: #000 !important;
+  border-color: #ccc !important;
+}
+
+.table-btn-editar:focus {
+  outline: none !important;
+  box-shadow: 0 0 4px #495057 !important;
+  border-color: #495057 !important;
+}
+
+.table-btn-editar:active {
+  background-color: #495057 !important;
+  color: #fff !important;
+  border-color: #495057 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.table th:nth-child(1) {
+  width: 40%;
+}
+
+.table th:nth-child(2) {
+  width: 10%;
+}
+
+.table th:nth-child(3) {
+  width: 10%;
+}
+
+.table th:nth-child(4) {
+  width: 5%;
+}
+
+/* REMOVE ALTERNATING COLORS IN TABLE */
+.table-striped tbody tr:nth-of-type(odd),
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #fff !important;
+}
+
+/* INPUT FOCUS */
+input[type="text"]:focus,
+.custom-search-bar:focus {
+  outline: none;
+  box-shadow: 0 0 4px #495057;
+  border-color: #495057;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+
+/*TABELA DE SINGLE*/
+/* Estilo para células de tópicos */
+.topics-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f0f0f0; /* Cor de fundo do quadrado */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  max-width: 70px; /* Define um limite de largura */
+} 
+
+/* Estilo para o número dentro da célula */
+.topics-number {
+  color: #495057; /* Cor do número */
+}
+
+/* Estilo para o ícone em Tópicos Ativos */
+.topics-cell .fa-check-circle {
+  color: #495057; /* Verde para ícone de confirmação */
+  font-size: 0.9rem; /* Tamanho do ícone */
+  transition: color 0.3s ease; /* Transição suave para hover */
+}
+
+.topics-cell .fa-circle {
+  color: #495057; /* Verde para ícone de confirmação */
+  font-size: 0.9rem; /* Tamanho do ícone */
+  transition: color 0.3s ease; /* Transição suave para hover */
+}
+
+/* Estilo para botão de editar */
+.table-btn-editar {
+  background-color: #495057 !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  border: 1px solid #ccc !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.2s ease-in-out;
+}
+
+.table-btn-editar:hover {
+  background-color: #ccc !important;
+  color: #fff !important;
+  border-color: #ccc !important;
+}
+
+.table-btn-editar:focus {
+  outline: none !important;
+  box-shadow: 0 0 4px #495057 !important;
+  border-color: #495057 !important;
+}
+
+.table-btn-editar:active {
+  background-color: #495057 !important;
+  color: #fff !important;
+  border-color: #495057 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.table-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espaçamento entre os botões */
+}
+
+/* Estilo para botão de deletar */
+.table-btn-delete {
+  background-color: #495057 !important;
+  color: #fff !important;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.table-btn-delete:hover {
+  background-color: #ccc !important;
+  color: #fff !important;
+}
+
+.table th:nth-child(1) {
+  width: 60%;
+}
+
+.table th:nth-child(2) {
+  width: 10%;
+}
+
+.table th:nth-child(3) {
+  width: 10%;
+}
+
+.table th:nth-child(4) {
+  width: 5%;
+}
+
+/*TABELA SINGLE TOPIC*/
+/* Botão para itens da coluna PDF */
+.pdf-column-item {
+  background-color: #f0f0f0;
+  border: none;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  gap: 0.5rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.pdf-column-item:hover {
+  background-color: #f0f0f0!important;
+  color: #000;
+}
+
+/* Ícone de PDF */
+.pdf-icon {
+  color: #495057; /* Vermelho típico de ícones de PDF */
+  font-size: 16px;
+}
+
+/* Texto do número de arquivos */
+.pdf-number {
+  font-size: 16px;
+  color: #495057;
+}
+
+/* Texto "arquivo/arquivos" */
+.pdf-text {
+  font-size: 16px;
+  color: #495057; /* Cinza claro */
+}
+
+/* Quadrado de seleção */
+/* Estilização do quadrado de seleção */
+.select-box {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #495057;
+  border-radius: 4px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.select-box.selected {
+  background-color: #495057;
+  border-color: #495057;
+}
+
+.select-box i {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Alinhamento do conteúdo na célula */
+.row-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Botão de selecionar todos */
+.select-all {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* Linha da tabela selecionada */
+.table-row.selected {
+  background-color: #e9ecef; /* Cor clara para indicar seleção */
+}
+
+/* Adiciona transição ao hover e clique */
+.table-row {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.table-row:hover {
+  background-color: #f1f3f5;
+}
+
+
+/* SIDE BAR*/
+.sidebar {
+  background-color: #495057;
+  color: transparent;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  z-index: 1100; /* Garante que a sidebar fique acima de outros elementos */
+}
+
+.sidebar.expanded {
+  width: 200px;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Ajusta o botão de alternância */
+.sidebar.collapsed .toggle-button {
+  background-color: #6C757D;
+  position: relative;
+  border-radius: 5px;
+  padding: 2px 11px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os elementos à esquerda */
+    width: 100%;
+    padding: 10px 15px;
+}
+
+/* Botão de alternar (toggle) */
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 20px!important; /* Espaçamento entre o botão e a logo */
+    z-index: 1101;
+}
+
+/* Ajuste da logo */
+.sidebar-logo {
+    width: 100px; /* Ajuste conforme necessário */
+    height: auto;
+    opacity: 1; /* Mantém visível */
+    transform: translateX(0); /* Posição normal */
+}
+
+/* Quando a sidebar está colapsada */
+.sidebar.collapsed .sidebar-logo {
+    opacity: 0; /* Esconde suavemente */
+    transform: translateX(-10px); /* Move um pouco para a esquerda */
+}
+
+@media (max-width: 768px) {
+    .sidebar-logo {
+        width: 60%; /* Ajusta o tamanho para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-logo {
+        width: 50%; /* Diminui ainda mais em telas muito pequenas */
+    }
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding-top: 20px; /* Mantém um espaçamento padrão */
+    z-index: 1102;
+}
+
+.sidebar.expanded .menu {
+    padding-top: 1px; /* Mesmo espaçamento da versão minimizada */
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+  z-index: 1103; /* Mantém os itens sempre interativos */
+}
+
+.menu-item:hover {
+  background-color: #6C757D;
+}
+
+.menu-item.active {
+  background-color: #6C757D;
+  position: relative;
+  padding: 10px 11px;
+}
+
+.sidebar.expanded .menu-item.active::after {
+  content: '';
+  position: absolute;
+  right: -28px; /* Projeta para fora da sidebar */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 40px;
+  background-color: #f0f0f0; /* Cor de fundo da sidebar */
+  border-radius: 40%;
+  z-index: 1104;
+}
+
+/* Botão de Sair */
+.logout-button {
+  margin-top: auto;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 1105;
+}
+
+.logout-button:hover {
+  background-color: #6C757D;
+}
+
+/* Conteúdo principal */
+.main-content {
+  margin-left: 200px;
+  padding: 20px;
+  position: relative; /* Garante que fique abaixo da sidebar */
+  z-index: 1000; /* Sidebar e seus itens estarão acima */
+}
+
+.main-content.collapsed {
+  margin-left: 80px;
+  z-index: 1000;
+}
+
+/* Botão de Sair */
+.logout-button {
+  margin-top: auto; /* Alinha ao final */
+  background-color: transparent;
+  color: #fff;
+}
+
+.logout-button:hover {
+  background-color: #6C757D; /* Cinza escuro ao passar o mouse */
+  color: #fff;
+}
+
+
+/* RODAPÉ CONFIGURAÇÕES */
+/* Rodapé fixo */
+.footer-config {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  border-top: 1px solid #ddd;
+  z-index: 1000;
+  height: 4rem; /* Altura fixa do rodapé */
+  transition: all 0.3s ease; /* Transição suave para mudanças */
+}
+
+.footer-number {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Rodapé quando a sidebar está expandida */
+.footer-config.expanded {
+  left: 200px; /* Mesma largura da sidebar expandida */
+  width: calc(100% - 200px); /* Largura dinâmica */
+}
+
+/* Rodapé quando a sidebar está minimizada */
+.footer-config.collapsed {
+  left: 80px; /* Mesma largura da sidebar minimizada */
+  width: calc(100% - 80px); /* Largura dinâmica */
+}
+
+.footer-config-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #495057; /* Padrão de texto */
+}
+
+.footer-config-title i {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  color: #495057;
+}
+
+/* Botões do rodapé */
+.footer-config-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-config-button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.footer-config-button-save {
+  background-color: #495057;
+  color: #fff;
+  border: none;
+}
+
+.footer-config-button-save:hover {
+  background-color: #f0f0f0;
+}
+
+.footer-config-button-save:active {
+  background-color: #f0f0f0 !important; /* Cor ao clicar */
+}
+
+.footer-config-button-cancel {
+  background-color: #f0f0f0;
+  color: #495057;
+  border: none;
+}
+
+.footer-config-button-cancel:hover {
+  background-color: #6C757D!important; /* Fundo mais claro */
+  color: #fff !important; /* Texto branco */
+}
+
+.footer-config-button-cancel:active {
+  background-color: #f0f0f0 !important; /* Cor ao clicar */
+}
+
+
+/*RODAPÉ DA TELA DE TÓPICOS*/
+
+/* Informações de tópicos no rodapé */
+/* Rodapé principal */
+/* Rodapé fixo */
+.footer-config {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  border-top: 1px solid #ddd;
+  z-index: 1000;
+  height: 4rem; /* Altura fixa do rodapé */
+  transition: all 0.3s ease; /* Transição suave para mudanças */
+}
+
+/* Rodapé quando a sidebar está expandida */
+.footer-config.expanded {
+  left: 200px; /* Mesma largura da sidebar expandida */
+  width: calc(100% - 200px); /* Largura dinâmica */
+}
+
+/* Rodapé quando a sidebar está minimizada */
+.footer-config.collapsed {
+  left: 80px; /* Mesma largura da sidebar minimizada */
+  width: calc(100% - 80px); /* Largura dinâmica */
+}
+
+/* Título do rodapé */
+.footer-config-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #495057;
+}
+
+.footer-config-title i {
+  margin-right: 0.5rem;
+}
+
+/* Espaço flexível para alinhar os elementos */
+.footer-config-spacer {
+  flex-grow: 1; /* Ocupa todo o espaço disponível */
+}
+
+/* Informações de tópicos */
+.footer-config-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espaçamento entre os itens */
+  margin-right: 2rem; /* Adiciona o espaçamento do botão de cancelar */
+}
+
+.footer-config-info-box {
+  background-color: #f8f9fa; /* Fundo claro */
+  border: 1px solid #ddd; /* Borda fina */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  font-weight: bold;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botões */
+.footer-config-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-config-button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.footer-config-button-cancel {
+  background-color: #f0f0f0;
+  color: #495057;
+  border: none;
+}
+
+.footer-config-button-cancel:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.footer-config-button-save {
+  background-color: #495057;
+  color: #fff;
+  border: none;
+}
+
+.footer-config-button-save:hover {
+  background-color: #6c757d;
+}
+
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #495057; /* Cor padrão do texto */
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #495057; /* Cor do ícone */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #495057; /* Vermelho ao passar o mouse */
+}
+
+.materia-item.associated {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.materia-item.associated .materia-icon {
+  color: gray;
+}
+
+
+/* Corpo do Modal */
+.modal-body {
+  margin-top: 1rem;
+  max-height: 400px;
+  overflow-y: auto; /* Permite rolagem se houver muitos itens */
+}
+
+.modal-search-bar {
+  max-width: 100%;
+  flex-shrink: 0;
+  min-width: 150px; /* Define largura mínima */
+  text-align: center; /* Centraliza texto */
+}
+
+.search-icon {
+  background-color: #f0f0f0;
+  border: none;
+}
+
+/* Ícone ao lado esquerdo da matéria */
+.materia-icon {
+  font-size: 1.2rem;
+  color: #6c757d; /* Cor padrão (cinza) */
+  margin-right: 0.5rem; /* Espaçamento entre o ícone e o nome */
+  transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+.materia-item.selected .materia-icon {
+  color: #28a745; /* Verde para itens selecionados */
+}
+
+/* Ícone ao passar o mouse */
+.materia-item:hover .materia-icon {
+  color: #218838; /* Verde mais escuro ao passar o mouse */
+}
+
+.materias-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Lista de matérias */
+.materias-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada item na lista */
+.materia-item {
+  display: flex;
+  justify-content: space-between; /* Ícone e nome na esquerda, tópicos na direita */
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background: #f9f9f9; /* Fundo claro */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.2s ease;
+}
+
+.materia-item:hover {
+  background: #f0f0f0; /* Fundo ao passar o mouse */
+}
+
+.materia-item.selected {
+  background: #e0ffe0; /* Fundo verde claro para itens selecionados */
+  border: 1px solid #28a745; /* Destaque de borda */
+}
+
+/* Container para o ícone e nome */
+.materia-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espaçamento entre o ícone e o nome */
+}
+
+/* Ícone de seleção (círculo vazio e círculo preenchido) */
+.materia-icon {
+  font-size: 1.5rem; /* Tamanho do ícone */
+  color: transparent; /* Faz o meio do círculo vazio */
+  border: 2px solid #6c757d; /* Borda cinza padrão */
+  border-radius: 50%; /* Forma de círculo */
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+.materia-item.selected .materia-icon {
+  color: #495057; /* Faz o interior do ícone selecionado branco */
+  background-color: #fff!important; /* Fundo verde para ícone selecionado */
+  border-color: #495057!important; /* Borda verde */
+}
+
+.materia-item:hover .materia-icon {
+  color:#495057;
+  border-color: #495057!important;
+  background-color: #495057!important; /* Verde mais escuro ao passar o mouse */
+}
+
+.materia-nome {
+  font-weight: bold;
+  color: #495057;
+}
+
+.materia-topicos {
+  font-size: 0.9rem;
+  color: #6c757d; /* Cinza padrão */
+}
+
+.topics-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+
+.topics-number {
+  font-weight: bold;
+  color: #495057;
+}
+
+/*.select-all-button {
+  display: block;
+  margin: 0 auto 1rem;
+  background: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.2s ease;
+}
+
+.select-all-button:hover {
+  background: #5a6268;
+}
+
+.select-all-button:focus {
+  outline: none;
+  box-shadow: 0 0 4px #6c757d;
+}*/
+
+/* Rodapé do Modal */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Botão Salvar */
+.save-button {
+  background-color: #495057;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.save-button:hover {
+  background-color: #f0f0f0;
+}
+
+.save-button:active {
+  background-color: #f0f0f0 !important; /* Cor ao clicar */
+}
+
+.save-button:disabled {
+  background: #ccc; /* Fundo cinza claro para desabilitado */
+  color: #666; /* Texto cinza escuro */
+  cursor: not-allowed; /* Cursor não permitido */
+}
+
+/* Botão Cancelar */
+.cancel-button {
+  background-color: #f0f0f0;
+  color: #495057;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cancel-button:hover {
+  background-color: #6C757D!important; /* Fundo mais claro */
+  color: #fff !important; /* Texto branco */
+}
+
+.cancel-button:active {
+  background-color: #f0f0f0 !important; /* Cor ao clicar */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F1F3F5;
+}
+
+/* Left Side */
+.login-left {
+  flex: 1;
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.login-left-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.login-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+}
+
+.login-text {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  width: 45%;
+}
+
+.login-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.login-text p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.login-decorative-lines {
+  position: absolute;
+  top: 20rem;
+  left: -19rem;
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+  opacity: 1;
+  transform: scale(0.4);
+}
+
+/* Right Side */
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-logo {
+    display: block;
+    position: relative;
+    top: -200px; /* Ajuste fino para subir a logo */
+    margin: 0 auto 1rem auto;
+    width: 120px;
+    height: auto;
+    transition: all 0.3s ease-in-out; /* Animação suave para mudanças */
+}
+
+/* 🔹 Ajuste para telas menores */
+@media (max-width: 768px) {
+    .login-logo {
+        width: 100px; /* Reduz o tamanho da logo em telas menores */
+        top: -10px; /* Ajuste para manter alinhado */
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-logo {
+        width: 80px; /* Reduz ainda mais em telas muito pequenas */
+        top: -5px;
+    }
+}
+
+.login-input-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.login-input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.login-input-group input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  border-radius: 20%;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox.checked {
+  background-color: #333;
+}
+
+.forgot-password {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #495057;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.login-button:hover {
+  background-color: #343a40;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito ao clicar */
+.login-button:active {
+  background-color: #212529;
+}
+
+/* Alteração do cursor quando estiver desabilitado */
+.login-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.login-options {
+  margin-top: 1rem; /* Espaço entre o botão e o link */
+  text-align: center; /* Centraliza o texto */
+}
+
+.back-to-login {
+  display: inline-block; /* Para permitir controle de margens */
+  margin-top: 0.5rem;
+  font-size: 0.9rem; /* Ajuste o tamanho do texto, se necessário */
+  color: #333; /* Azul padrão para links */
+  text-decoration: underline; /* Adiciona a linha abaixo do texto */
+  cursor: pointer; /* Mostra o cursor de link ao passar o mouse */
+  transition: color 0.3s ease; /* Suaviza a mudança de cor */
+}
+
+.back-to-login:hover {
+  color: #0056b3; /* Cor ao passar o mouse */
+}
+
+
+.materia-excluida {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.label-excluido {
+  background-color: red;
+  color: white;
+  padding: 3px 5px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+
+
+/* Responsividade tela login*/
+@media (max-width: 768px) {
+  .login-container {
+      flex-direction: column;
+  }
+  .login-left, .login-right {
+      flex: none;
+      width: 100%;
+      padding: 2rem;
+  }
+  .login-text {
+      width: 80%;
+  }
+}
+
+/*RESPONSIVIADE*/
+
+/* Responsividade Modal */
+@media (max-width: 576px) {
+  .modal-content {
+    width: 100%;
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .materia-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .materia-topicos {
+    margin-top: 0.5rem;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cancel-button, .save-button {
+    width: 100%; /* Botões ocupam toda a largura */
+  }
+}
+
+
+/* RESPONSIVIDADE HEADER 1 E TABELA 1 */
+@media (max-width: 1200px) {
+  .header-controls {
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 0.5rem;
+  }
+
+  .search-bar {
+    max-width: 200px;
+    text-align: left;
+  }
+
+  .table th:nth-child(1) {
+    width: 30%;
+  }
+}
+
+
+/*Responsividade Header 2 e Side Bar 1*/
+@media (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .header-title,
+  .header-controls {
+    width: 100%; /* Ocupa toda a largura */
+    justify-content: flex-start; /* Alinha itens horizontalmente à esquerda */
+    align-items: flex-start;
+  }
+
+  .header-title {
+    text-align: left;
+  }
+
+  .filter-dropdown,
+  .add-item-btn {
+    width: 100%;
+    text-align: left;
+  }
+
+  .search-bar {
+    text-align: left;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar.expanded {
+    width: 150px;
+  }
+
+  .main-content {
+    margin-left: 150px;
+    padding: 1rem;
+  }
+}
+
+
+/* RESPONSIVIDADE HEADER SINGLE*/
+@media (max-width: 992px) {
+  .header-single-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-single-name {
+    width: 100%;
+  }
+
+  .add-item-btn {
+    width: 100%;
+  }
+
+  .header-single-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .header-single-controls {
+      flex-direction: column; /* Empilha os elementos em telas menores */
+      align-items: flex-start; /* Alinha à esquerda */
+      gap: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header-single-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-single-name {
+    width: 100%; /* Campo de nome ocupa toda a largura */
+  }
+
+  .add-item-btn {
+    width: 100%;
+  }
+
+  .header-single-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-single-title {
+    font-size: 1.5rem;
+  }
+
+  .add-item-btn {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+}
+
+
+/*Responsividade Side Bar 2 e Tabela 2*/
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+  }
+
+  .sidebar.expanded {
+    width: 100%;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .header-title {
+    font-size: 20px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 14px;
+  }
+
+  .table th:nth-child(1) {
+    width: 50%;
+  }
+
+  .table-btn-editar,
+  .table-btn-subitens {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .custom-pagination .page-link {
+    padding: 3px 6px !important;
+  }
+}
+
+
+/*RESPONSIVIDADE HEADER 2*/
+@media (max-width: 576px) {
+  .header {
+    text-align: center;
+  }
+
+  .header-title {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+  }
+
+  .filter-dropdown,
+  .add-item-btn {
+    font-size: 14px;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .custom-pagination {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .menu-item span,
+  .logo-text {
+    display: none;
+  }
+
+  .toggle-button {
+    font-size: 18px;
+  }
+
+  @media (max-width: 992px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .header-controls {
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  
+    .search-bar,
+    .filter-dropdown,
+    .add-item-btn {
+      width: 100%; /* Largura total em telas pequenas */
+      max-width: 300px;
+    }
+  
+    .custom-pagination {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header-title {
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    .header-controls {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .filter-dropdown,
+    .add-item-btn,
+    .search-bar {
+      width: 100%;
+    }
+  }
+}
+
+
+/*RESPONSIVIDADE SIDE BAR 3*/
+/* Sidebar sempre expandida em telas menores */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100% !important;
+  }
+
+  .sidebar.expanded {
+    width: 100% !important;
+  }
+
+  .sidebar.collapsed {
+    width: 100% !important;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+  }
+
+  .toggle-button {
+    display: none; /* Esconde o botão de alternar */
+  }
+}
+
+
+/* Responsividade para o rodapé */
+@media (max-width: 768px) {
+  .footer-config {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer-config-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-config-button {
+    flex: 1; /* Ocupa o espaço disponível */
+    text-align: center;
+  }
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Ajuste conforme necessário */
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ddd;
+  border-top-color: #999;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+
+.label-inativa {
+  background-color: #495057;
+  color: white;
+  padding: 3px 5px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.materia-inativa {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.materia-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed; /* Muda o cursor para o símbolo de proibido */
+}
