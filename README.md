@@ -56,8 +56,7 @@ Hospedagem:
 - 🚧 Filtros e busca por tópicos e matérias
 
 ## 📷 Demonstração
-<br><br>
-<img src="api/plataforma.png" alt="Hostel Image" width="600">
+<img src="/plataforma.png" alt="Hostel Image" width="600">
 
 ## 💡 Contribuições
 Este projeto é um experimento pessoal de aprendizado e aperfeiçoamento de habilidades.
